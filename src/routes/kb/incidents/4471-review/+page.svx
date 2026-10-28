@@ -4,13 +4,13 @@ title: '#4471 · separate date problems'
 owner: support desk
 status: resolved
 reviewed: 2026-10-28
-signature: Codex
+signature: v1.eyJzdWIiOiIzMTQyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDU2NDUsImV4cCI6MTc5MzI5MjA0NX0.l8T5XZ-PRHEyM08Hd-CbcBrg4YoXnf9weic6_tubgpo
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
-  const signature = "Codex";
+  const signature = "v1.eyJzdWIiOiIzMTQyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDU2NDUsImV4cCI6MTc5MzI5MjA0NX0.l8T5XZ-PRHEyM08Hd-CbcBrg4YoXnf9weic6_tubgpo";
 </script>
 
 The desk merged reports about wrong dates into #4471. The live breakdown groups unique reports by tenant locale and booking form, rather than by the intake tag.
