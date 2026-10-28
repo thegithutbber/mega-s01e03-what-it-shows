@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · separate date problems'
 owner: support desk
-status: investigation
+status: resolved
 reviewed: 2026-10-28
 signature: Codex
 ---
@@ -10,19 +10,19 @@ signature: Codex
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
-  export let signature;
+  const signature = "Codex";
 </script>
 
 The desk merged reports about wrong dates into #4471. The live breakdown groups unique reports by tenant locale and booking form, rather than by the intake tag.
 
 <CauseTable ticket={4471} />
 
-## What to investigate
+## Engineering update
 
-- **Shared parser:** The parser reads month first even for tenants who write day first. Check date interpretation across channels.
-- **Booking-v3 hint:** The form displays a month-first hint but reads the input in the tenant's day-first order. Make the hint and interpretation agree.
+- **Shared parser — fixed:** Engineering changed the parser to read DD/MM for EU locales.
+- **Booking-v3 hint — won't fix:** Engineering retired the booking-v3 form.
 
-The table also flags reports that the desk read as a one-day move but filed by tenant under a cause. Review those reports individually; a month/day swap does not by itself explain a one-day difference.
+The desk closed #4471 on 5 October. The table also flags reports that the desk read as a one-day move but filed by tenant under a cause. Review those reports individually; a month/day swap does not by itself explain a one-day difference.
 
 The subject-only duplicate rule can merge different causes and split matching causes across tickets. Read the reports and tenant details when triaging; the accepted decision record remains unchanged.
 
